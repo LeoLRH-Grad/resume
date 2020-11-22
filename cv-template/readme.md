@@ -53,3 +53,55 @@ $(document).ready(function($){
     $("*").removeAttr('contenteditable');        
 })
 ```
+
+
+
+
+
+
+
+
+
+接着在自己电脑上github上写一个项目然后用Settings里面的github pages选择一下master
+
+Github Pages 支持托管的页面分两类，个人/组织页面 与 项目页面，其主要区别就是托管位置的区别。如下表所示（这里略去组织，它跟个人是差不多的）：
+
+| 类型     | 页面域名 & 托管位置              | 页面源文件所在的分支                               |
+| -------- | -------------------------------- | -------------------------------------------------- |
+| 个人主页 | `username.github.io`             | `master`                                           |
+| 项目主页 | `username.github.io/projectname` | `master`、`gh-pages` 、或是在`master`的`doc`目录下 |
+
+如果想使用个人主页，那么就创建一个名为 `username.github.io` （username需要替换为你的用户名）的库，在主分支`master`上托管你的页面代码。
+
+如果是使用项目主页，那么可以选择将代码托管在`master`、`gh-pages`、或者`master`的`doc`目录下，其中`gh-pages`是默认的页面托管分支，如果想使用`master`，可在项目页面的设置栏中进行切换。
+
+![1-2.3-1](https://doc.shiyanlou.com/document-uid8834labid2084timestamp1472195842571.png)
+
+无论使用哪一种页面操作都是差不多的，这里就用项目页面来做演示了，由于我们所有的代码就只有页面代码而已，那么就直接在`master`分支上进行托管吧。
+
+先在本地仓库做一次代码提交：
+
+```
+$ git add .
+$ git commit -m 'commit my cv'
+```
+
+在项目页面找到你的仓库地址后输入：
+
+```
+$ git remote add origin 你的远程仓库地址
+$ git push -u origin master
+```
+
+代码提交到远程仓库后，在项目页面设置 Github Pages 使用的托管源。
+
+![1-2.3-3](https://doc.shiyanlou.com/document-uid8834labid2084timestamp1472195989896.png)
+
+现在你可以访问`https://LeoLRH-Grad.github.io/resume/`这个地址了，恭喜，简历页面已成功部署在了 Github Pages 上。
+
+
+
+这个方法太麻烦还不如直接就在简历网上直接写就好啦（超级简历）这个我更建议写成项目经历和项目过程记录文档
+
+这个还可以去尝试加入防一个pdf会是什么样？这个下次进行尝试
+
